@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Enter OTP below"
+        android:textSize="24sp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/otp_view"
+        app:layout_constraintEnd_toEndOf="@id/otp_view"
+        app:layout_constraintStart_toStartOf="@id/otp_view" />
+
+    <com.rakshit.otpedittet.optview.OTPView
+        android:id="@+id/otp_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:importantForAutofill="no"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:otp_cursorColor="@color/red"
+        app:otp_filledTextSize="24sp"
+        app:otp_highlightedTextSize="24sp"
+        app:otp_itemCount="4"
+        app:otp_itemHeight="56sp"
+        app:otp_itemWidth="48sp"
+        app:otp_marginBetween="8dp"
+        app:otp_showCursor="true"
+        app:otp_textColor="@color/black"
+        app:otp_textSize="24sp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
